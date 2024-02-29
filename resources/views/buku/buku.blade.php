@@ -17,19 +17,22 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                             
+                                    <th>Foto</th>
                                     <th>Judul Buku</th>
                                     <th>Pengarang</th>
                                     <th>Penerbit</th>
                                     <th>Tahun Terbit</th>
-                                    <th class="col-1 px-4 py-2">Aksi</th>
+                                    <th class="col-3 px-4 py-2">Aksi</th>
                                     
                                 </tr>
                             </thead>
                             <tbody>
                                 @forelse ($buku as $b)
                                     <tr>
-                                     
+                                        
+                                    <td>
+                                            <img src="{{ asset('storage/'.$b->foto) }}" alt="Foto Buku" width="100">
+                                            </td>
                                         <td>{{ $b->judul }}</td>
                                         <td>{{ $b->penulis }}</td>
                                         <td>{{ $b->penerbit }}</td>
@@ -41,9 +44,9 @@
                                         <button type="submit" class="btn btn-danger">
                                         <i class="fa fa-trash"></i>    
                                         Hapus</button>
-                                    <td>
-                                    <a class="btn btn-warning" href="{{route('buku.edit', $b->id)}}">Edit</a>
                                     
+                                    <a class="btn btn-warning" href="{{route('buku.edit', $b->id)}}">Edit</a>
+                                    </form>
                                 </td>
                                     </tr>
                                 @empty

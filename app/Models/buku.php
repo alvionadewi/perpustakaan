@@ -11,6 +11,7 @@ class buku extends Model
     protected $table = 'buku';
 
     protected $fillable = [
+        'foto',
         'judul',
         'penulis',
         'penerbit',
