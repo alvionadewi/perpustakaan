@@ -45,7 +45,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/buku/hapus/{id}', [BukuController::class, 'destroy'])->name('buku.destroy');
     Route::patch('/buku/update/{id}', [BukuController::class, 'update'])->name('buku.update');
     Route::get('/buku/edit/{id}', [BukuController::class, 'edit'])->name('buku.edit'); 
-    Route::get('/peminjaman', [PeminjamanController::class, 'index'])->name('peminjaman');
+    Route::get('/peminjaman', [PeminjamanController::class, 'index'])->name('peminjaman.index');
     Route::get('/peminjaman/tambah', [PeminjamanController::class, 'tambahPeminjaman'])->name('peminjaman.tambah');
     Route::post('/peminjaman/store', [PeminjamanController::class, 'storePeminjaman'])->name('peminjaman.store');
     Route::post('/peminjaman/selesai/{id}', [PeminjamanController::class, 'kembalikanBuku'])->name('peminjaman.kembalikan');

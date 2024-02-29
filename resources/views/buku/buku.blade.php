@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <div class="container py-4">
+<div class="container py-4">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
@@ -9,7 +9,7 @@
 
                     <div class="card-body">
                         <div class="mb-4">
-                            <a href="{{ route('buku.create') }}" class="btn btn-primary">
+                            <a href="{{ route('buku.create') }}" class="btn btn-info">
                                 + Tambah Data Buku
                             </a>
                         </div>
